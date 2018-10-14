@@ -1,7 +1,10 @@
+// Getting variables
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const bot = client;
 
+
+// Functions
 client.on("ready", async () => {
    console.log("I have started!");
 })
@@ -9,7 +12,7 @@ client.on("ready", async () => {
 client.on("message", async message => {
 
    const cont = message.content;
-   
+    // Commands
    if (cont === "Ping") {
       message.channel.send("Pong!");
    }
