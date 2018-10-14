@@ -1,7 +1,8 @@
 # Command Layout
 This is what the command file defaults look like. Make sure to name the file `<name>.js`!
 
-```const Discord = require("discord.js");
+```js
+const Discord = require("discord.js");
 const fs = require("fs"); 
 
 module.exports.run = async (bot, client, message, args) => {
@@ -16,4 +17,4 @@ module.exports.help = {
 	longdes: "Pings the bot.",
 	mentionedperm: "None",
   category: "Utility"
-}```
+}
