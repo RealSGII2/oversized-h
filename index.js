@@ -21,8 +21,8 @@ fs.readdir("./commands", (err, files) => {
 	});
 });
 
-client.developers.set("one", "");
-client.developers.set("two", "");
+client.developers.set("one", "hi");
+client.developers.set("two", "bye");
 
 client.on("ready", async () => {
 	console.log(`${client.user.tag} has started!`);
