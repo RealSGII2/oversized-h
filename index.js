@@ -4,7 +4,7 @@ const bot = client;
 
 client.on("ready", async () => {
    console.log("I have started!");
-}
+})
 
 client.on("message", async message => {
 
