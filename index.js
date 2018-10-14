@@ -1,9 +1,10 @@
-/* const Discord = require("discord.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
 
 const fs = require("fs");
 
 client.commands = new Discord.Collection();
+client.developers = new Discord.Collection();
 
 fs.readdir("./commands", (err, files) => {
 	if (err) console.log(err);
@@ -19,6 +20,9 @@ fs.readdir("./commands", (err, files) => {
 		client.commands.set(props.help.name, props);
 	});
 });
+
+client.developers.set("one", "");
+client.developers.set("two", "");
 
 client.on("ready", async () => {
 	console.log(`${client.user.tag} has started!`);
@@ -46,4 +50,4 @@ client.on("message", async message => {
 	}
 });
 
-client.login(process.env.token); */
+client.login(process.env.token); 
