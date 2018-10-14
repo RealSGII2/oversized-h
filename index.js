@@ -28,7 +28,7 @@ client.on("message", async message => {
 
 	if (message.author.bot) return;
 
-	const prefixes = [';', `<@491345635962781696> `, 'd;;', 'd;'];
+	const prefixes = ['+', `<@491345635962781696> `];
 	let prefix = false;
   	for(const thisPrefix of prefixes) {
     		if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
@@ -46,4 +46,4 @@ client.on("message", async message => {
 	}
 });
 
-client.login(process.env.BOT_T0KEN); */
+client.login(process.env.token); */
