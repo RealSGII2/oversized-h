@@ -46,8 +46,6 @@ client.on("message", async message => {
 
 	let commandfile = client.commands.get(cmd.slice(prefix.length));
 	if (commandfile) commandfile.run(client,client,message,args);
-
-	}
 });
 
 client.login(process.env.token); 
