@@ -81,7 +81,7 @@ message.author.send({embed: {
       },
       {
         name: "Command Descriptions",
-        value: "Type `+help <command>` here in this DM to get information on a command."
+        value: "Send a message containing `.`"
       },
     ],
     timestamp: new Date(),
