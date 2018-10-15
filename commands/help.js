@@ -131,7 +131,7 @@ message.author.send({embed: {
 
 module.exports.help = {
   name: "help",
-  usage: "help [command],
+  usage: "help [command]",
   description: "Gives info on all commands or a single command",
   longdes: "Gives information on a command or gives a list of all commands.",
   mentionedperm: "None",
