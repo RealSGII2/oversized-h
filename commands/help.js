@@ -32,7 +32,7 @@ if (command) { if (`../commands/` + command + `.js`) {
       			icon_url: bot.user.avatarURL
     			},
     		title: "Commands",
-    		description: "Commands for Dart Bot",
+    		description: "\n",
     	fields: [{
         	name: "Name",
         	value: props.help.name,
@@ -74,7 +74,7 @@ message.author.send({embed: {
       icon_url: bot.user.avatarURL
     },
     title: "Commands",
-    description: "Commands for Dart Bot",
+    description: "\n",
     fields: [{
         name: "Utility",
         value: "`+help` - Gets all the bot commands or a specific command. \n`+ping` - Shows API latency."
