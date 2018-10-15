@@ -1,3 +1,6 @@
 {
-    "start": "started file"
+    "start": "started file",
+    "prefix": "+",
+    "prompt_active_err": "Sorry ${{-username-}}, someone is already using the ${{-prompt_name-}} prompt! Wait for the prompt to end.",
+    "end": "ending file//"
 }
