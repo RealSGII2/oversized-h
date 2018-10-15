@@ -1,5 +1,7 @@
 # Oversized H (Temporary Name)
-Bot coded by SGII2 "Omni" for purposes such as:
+
+
+Bot made for Discord coded by SGII2 "Omni" for purposes such as:
  - *We're deciding, this will come soon.*
  
 ## Details
