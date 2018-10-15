@@ -3,7 +3,7 @@ const fs = require("fs");
 
 module.exports.run = async (bot, client, message, args) => {
   // This is what code runs when the command is ran.
-  fs.readdir("./commands", (err, files) => {
+  /* fs.readdir("./commands", (err, files) => {
 	if (err) console.log(err);
 	let jsfile = files.filter(f => f.split(".").pop() === "js")
 	if (jsfile.length <= 0) {
@@ -18,11 +18,11 @@ module.exports.run = async (bot, client, message, args) => {
 			embedmoderation = embedmoderation + ` \n ;${props.help.name} - ${props.help.description}`
 		}
 	});
- })
+ }) */
 
 const command = args.shift();
 
-if (command && `../commands/` + command + `.js`) {
+if (command) { if (`../commands/` + command + `.js`) {
 	fs.readdir("./commands", (err, files) => {
 		let props = require(`../commands/${command}`);
 		message.channel.send({embed: {
@@ -62,10 +62,10 @@ if (command && `../commands/` + command + `.js`) {
     	timestamp: new Date(),
     footer: {
       icon_url: bot.user.avatarURL,
-      text: "By SGII2, Lxphere, and Dart"
+      text: "Help Command"
     }
   }
-});})
+});})} else {message.reply(`\`${command}\` is not a valid command! Run \`+help\` to get all the commands.`);}
 } else {
 message.author.send({embed: {
     color: 1752220,
@@ -76,26 +76,18 @@ message.author.send({embed: {
     title: "Commands",
     description: "Commands for Dart Bot",
     fields: [{
-        name: "Moderation",
-        value: "`;warn` - Warns the member mentioned in the command. \n`;purge` - Deletes the amount of messages provided. \n`;kick` - Kicks mentioned user in the specific guild command was ran in. \n`;ban` - Bans mentioned user in the specific guild command was ran in. \n`;nick` - Sets the nickname for the desired user given."
-      },
-      {
         name: "Utility",
-        value: "`;ping` - Replies with the bots ping. \n`;say` - Sends a message as the bot. \n`;help` - Shows this help menu."
-      },
-      {
-        name: "Developer Commands",
-        value: "Developer commands are not shown to the public right now."
+        value: "`+help` - Gets all the bot commands or a specific command. \n`+ping` - Shows API latency."
       },
       {
         name: "Command Descriptions",
-        value: "Type `;help <command>` here in this DM to get information on a command."
+        value: "Type `+help <command>` here in this DM to get information on a command."
       },
     ],
     timestamp: new Date(),
     footer: {
       icon_url: bot.user.avatarURL,
-      text: "By SGII2, Lxphere, and Dart"
+      text: "Help Command"
     }
   }
 }).then(() => {message.channel.send("I sent you a direct message of all the commands!");}).catch(err => {message.reply("I was unable to send you the list of commands. Enable direct messages and try again.");});
